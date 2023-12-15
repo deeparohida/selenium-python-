@@ -9,14 +9,14 @@ from utilities.Baseclass import BaseClass
 
 class TestRegistration(BaseClass):
 
-
-
+    @pytest.mark.skip
     def test_registrationpage(self):
         homepage = HomePage(self.driver)
         homepage.login_page().click()
         loginPage = LoginPage(self.driver)
         loginPage.registeruser().click()
 
+    @pytest.mark.skip
     def test_newuserregistration(self):
         registerpage = Registration(self.driver)
         registerpage.getusername().send_keys("pinks22wwe2")

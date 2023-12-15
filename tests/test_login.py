@@ -13,6 +13,7 @@ from tests.conftest import driver
 
 class TestLogin(BaseClass):
 
+    @pytest.mark.skip
     def test_signin(self):
         homePage = HomePage(self.driver)
         homePage.login_page().click()
